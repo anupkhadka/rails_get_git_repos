@@ -1,6 +1,15 @@
 <h1>Search Github Repositories By Username</h1>
 <%= form_tag '/search' do %>
-  <%= label_tag :username %>
-  <%= text_field_tag :username %>
+  <%= text_field_tag :query %>
   <%= submit_tag "Search Github!" %>
 <% end %>
+
+<div>
+  <% if @repos %>
+    <ul>
+      <% @repos.each do |repo| %>
+      <li><%= link_to repo["html_url"], repo["html_url"] %> : <%= repo["description"] %> </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
