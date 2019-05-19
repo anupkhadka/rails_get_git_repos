@@ -1,15 +1,21 @@
-<h1>Search Github Repositories</h1>
-<%= form_tag '/search' do %>
-  <%= text_field_tag :query %>
-  <%= submit_tag "Search" %>
-<% end %>
-
+<div class="container">
+  <div class="row">
+    <h1> Github Search </h1>
+  </div>
+  <div class="row">
+    <%= form_tag '/search' do %>
+      <%= text_field_tag :query %>
+      <br>
+      <%= submit_tag "Search" %>
+    <% end %>
+  </div>
+  <div class="row">
+    <% if @repos %>
+      <ul>
+        <% @repos.each do |repo| %>
+        <li><%= link_to repo["html_url"], repo["html_url"] %> : <%= repo["description"] %> </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
 <div>
-  <% if @repos %>
-    <ul>
-      <% @repos.each do |repo| %>
-      <li><%= link_to repo["html_url"], repo["html_url"] %> : <%= repo["description"] %> </li>
-      <% end %>
-    </ul>
-  <% end %>
-</div>
