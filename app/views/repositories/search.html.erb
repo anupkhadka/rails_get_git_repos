@@ -4,7 +4,7 @@
   </div>
   <div class="row">
     <%= form_tag '/search' do %>
-      <%= text_field_tag :query %>
+      <%= text_field_tag :query, nil, placeholder: 'Keyword' %>
       <br>
       <%= submit_tag "Search" %>
     <% end %>
