@@ -1,24 +1,7 @@
-# README
+# Github Search
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This Rails application demonstrates the use of Faraday and Github API. This application provides users with a simple query form to make a search on Github. The application then uses the query string and makes an API request to Github, receives JSON response, parses the response, and displays the response to the user in a user-friendly style.  
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Usage
+This is a simple, intuitive app. Simply type your search string, and hit the "Search" button.
+The result will be displayed in the same page.
